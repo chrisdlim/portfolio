@@ -1,0 +1,42 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  padding: 2rem;
+  font-weight: normal;
+}
+
+a,
+.primary {
+  text-decoration: none;
+  color: rgb(0, 167, 209);
+  transition: 0.4s;
+}
+
+.resume-section {
+  height: 100vh;
+}
+
+body {
+  display: flex;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(214, 100%, 67%, 0.2);
+  }
+
+  a.active {
+    font-weight: bolder;
+  }
+}
+
+@media (max-width: 480px) {
+  #app {
+    margin: auto;
+  }
+}
