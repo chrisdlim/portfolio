@@ -5,7 +5,9 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   scrollBehavior: (to, _from, savedPos) => {
     if (to.hash) {
+      console.log(to.hash, to.hash.replace(/#/, ""));
       const element = document.getElementById(to.hash.replace(/#/, ""));
+      console.log(element);
       if (element && element.scrollIntoView) {
         element.scrollIntoView({ block: "end", behavior: "smooth" });
       }
@@ -18,8 +20,8 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "about",
-      component: () => import("../components/about-me.vue"),
+      name: "home",
+      component: () => import("../views/home-page.vue"),
     },
     {
       path: "/404",

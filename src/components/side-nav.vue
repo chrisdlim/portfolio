@@ -19,7 +19,12 @@ const navItems = [
     <a href="#about" class="cl-nav">
       <h1>CL</h1>
     </a>
-    <a v-for="navItem in navItems" :key="navItem.id" :href="'#' + navItem.id">
+    <a
+      v-for="navItem in navItems"
+      :key="navItem.id"
+      :href="'/#' + navItem.id"
+      :to="'#' + navItem.id"
+    >
       {{ navItem.label }}
     </a>
   </div>

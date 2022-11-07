@@ -1,7 +1,5 @@
 <script setup lang="ts">
 import SideNav from "./components/side-nav.vue";
-import AboutMe from "./components/about-me.vue";
-import ResumeView from "./components/resume/resume-view.vue";
 </script>
 
 <template>
@@ -10,8 +8,7 @@ import ResumeView from "./components/resume/resume-view.vue";
       <SideNav />
     </span>
     <span>
-      <AboutMe />
-      <ResumeView />
+      <router-view />
     </span>
   </div>
 </template>
