@@ -17,7 +17,7 @@ import ResumeView from "./components/resume/resume-view.vue";
 </template>
 <style scoped>
 .main {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
   display: grid;
 }
 
