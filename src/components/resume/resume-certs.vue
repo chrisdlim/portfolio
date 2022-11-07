@@ -6,5 +6,4 @@
   </div>
 </template>
 
-<script scoped>
-</script>
+<script scoped></script>
