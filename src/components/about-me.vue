@@ -48,6 +48,8 @@ h1 {
 
 h3 {
   font-size: 1.2rem;
+  font-style: italic;
+  font-weight: bold;
 }
 
 @media (min-width: 1024px) {
