@@ -23,6 +23,11 @@ export default {
   methods: {
     toggleMenu() {
       this.isShowMenu = !this.isShowMenu;
+      const width = this.isShowMenu ? "150px" : "0px";
+      const slidingMenu = document.getElementById("sliding-menu");
+      if (slidingMenu) {
+        slidingMenu.style.width = width;
+      }
     },
   },
 };
@@ -36,24 +41,22 @@ export default {
       size="lg"
       @click="toggleMenu"
     />
-    <div v-show="isShowMenu">
-      <div id="sliding-menu">
-        <font-awesome-icon
-          class="close-button"
-          icon="fa-solid fa-window-close"
-          size="md"
-          @click="toggleMenu"
-        />
-        <br />
-        <a
-          v-for="navItem in navItems"
-          :key="navItem.id"
-          :href="'/#' + navItem.id"
-          :to="'#' + navItem.id"
-        >
-          {{ navItem.label }}
-        </a>
-      </div>
+    <div id="sliding-menu">
+      <font-awesome-icon
+        class="close-button"
+        icon="fa-solid fa-window-close"
+        size="md"
+        @click="toggleMenu"
+      />
+      <br />
+      <a
+        v-for="navItem in navItems"
+        :key="navItem.id"
+        :href="'/#' + navItem.id"
+        :to="'#' + navItem.id"
+      >
+        {{ navItem.label }}
+      </a>
     </div>
   </div>
   <div class="nav">
@@ -95,17 +98,9 @@ export default {
   padding: 0rem 1rem;
 }
 
-/* nav a.router-link-exact-active {
-  color: var(--color-text);
-} */
-
-/* nav a.router-link-exact-active:hover {
-  background-color: transparent;
-} */
-
 @media (max-width: 480px) {
   .nav {
-    width: 0%;
+    visibility: hidden;
   }
 
   .menu {
@@ -134,7 +129,7 @@ export default {
     width: 150px;
     z-index: 1;
     background: black;
-    transition: 2s;
+    transition: 0.5s;
   }
 
   #sliding-menu a {
