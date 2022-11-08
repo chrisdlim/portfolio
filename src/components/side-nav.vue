@@ -20,13 +20,21 @@ export default {
       isShowMenu: false,
     };
   },
+  created() {
+    window.addEventListener("resize", this.resetMenu);
+  },
   methods: {
-    toggleMenu() {
-      this.isShowMenu = !this.isShowMenu;
-      const width = this.isShowMenu ? "150px" : "0px";
+    openMenu() {
       const slidingMenu = document.getElementById("sliding-menu");
-      if (slidingMenu) {
-        slidingMenu.style.width = width;
+      slidingMenu!.style.width = "150px";
+    },
+    closeMenu() {
+      const slidingMenu = document.getElementById("sliding-menu");
+      slidingMenu!.style.width = "0px";
+    },
+    resetMenu() {
+      if (window.innerWidth <= 480) {
+        this.closeMenu();
       }
     },
   },
@@ -39,14 +47,14 @@ export default {
       class="open-button"
       icon="fa-solid fa-bars"
       size="lg"
-      @click="toggleMenu"
+      @click="openMenu"
     />
     <div id="sliding-menu">
       <font-awesome-icon
         class="close-button"
         icon="fa-solid fa-window-close"
-        size="md"
-        @click="toggleMenu"
+        size="lg"
+        @click="closeMenu"
       />
       <br />
       <a
