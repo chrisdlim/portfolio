@@ -129,7 +129,7 @@ export default {
     width: 150px;
     z-index: 1;
     background: black;
-    transition: 0.5s;
+    transition: 0.3s;
   }
 
   #sliding-menu a {
