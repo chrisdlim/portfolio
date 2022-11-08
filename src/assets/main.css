@@ -6,11 +6,14 @@
   font-weight: normal;
 }
 
-a,
-.primary {
+a {
   text-decoration: none;
-  color: rgb(0, 167, 209);
+  color: var(--primary-color);
   transition: 0.4s;
+}
+
+.primary-color {
+  color: var(--primary-color);
 }
 
 .resume-section {

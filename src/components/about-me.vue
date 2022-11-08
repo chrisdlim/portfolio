@@ -6,12 +6,11 @@
       <img src="../assets/avatar.jpg" />
     </div>
     <div>
-      <h1 class="primary name">Chris Lim</h1>
+      <h1 class="primary-color name">Chris Lim</h1>
       <h3>Senior Full Stack Engineer</h3>
       <p>Some random info about me</p>
       <p>Bunch of hooplah</p>
       <p>blah blah blah</p>
-      <p>Some random info about me</p>
       <p>Some random info about me</p>
     </div>
   </div>
